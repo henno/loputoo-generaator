@@ -1,0 +1,50 @@
+---
+# =============================================================================
+# LÕPUTÖÖ METAANDMED
+# =============================================================================
+# Muuda need väärtused oma lõputöö andmetega.
+# Kõik väljad on kohustuslikud, välja arvatud need, mis on märgitud [valikuline].
+
+# -----------------------------------------------------------------------------
+# Põhiandmed
+# -----------------------------------------------------------------------------
+title: "Sinu lõputöö pealkiri"
+author: "Sinu Nimi"
+lang: et
+
+# -----------------------------------------------------------------------------
+# Dokumendi seaded (tavaliselt ei pea muutma)
+# -----------------------------------------------------------------------------
+documentclass: report
+fontsize: 12pt
+
+# -----------------------------------------------------------------------------
+# Struktuur
+# -----------------------------------------------------------------------------
+toc: true
+toc-depth: 2
+link-citations: true
+
+# -----------------------------------------------------------------------------
+# Asutuse andmed
+# -----------------------------------------------------------------------------
+university: "Viljandi Kutseõppekeskus"
+program: "Noorem tarkvaraarendaja"       # Sinu eriala nimetus
+worktype: "Eksamitöö"                    # või "Lõputöö"
+advisor: "Juhendaja Nimi"
+place: "Vana-Võidu"
+year: "2026"
+
+# -----------------------------------------------------------------------------
+# pandoc-crossref seaded (eesti keelseks viitamiseks)
+# -----------------------------------------------------------------------------
+figureTitle: "Joonis"
+tableTitle: "Tabel"
+titleDelim: "."
+figPrefix:
+  - "joonis"
+  - "joonised"
+tblPrefix:
+  - "tabel"
+  - "tabelid"
+---
