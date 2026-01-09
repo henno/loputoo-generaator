@@ -46,17 +46,17 @@ Kopeeri see kaust oma projekti kausta:
 
 ```bash
 # Klooni see repo
-git clone https://github.com/henno/loputo-generaator.git
+git clone https://github.com/henno/loputoo-generaator.git
 
 # Kopeeri oma projekti
-cp -r loputo-generaator my-project/docs/loputoo
+cp -r loputoo-generaator my-project/docs/loputoo
 ```
 
 ### Variant 2: Git submodule
 
 ```bash
 cd my-project
-git submodule add https://github.com/henno/loputo-generaator.git docs/loputoo
+git submodule add https://github.com/henno/loputoo-generaator.git docs/loputoo
 ```
 
 ### Variant 3: Eraldi kaust
@@ -114,7 +114,7 @@ Väljundfailid:
 ## Kausta struktuur
 
 ```
-loputo-generaator/
+loputoo-generaator/
 ├── loputoo.md           # ← SINU LÕPUTÖÖ SISU
 ├── meta.yaml            # ← SINU METAANDMED
 ├── kirjandus.bib        # ← SINU ALLIKAD

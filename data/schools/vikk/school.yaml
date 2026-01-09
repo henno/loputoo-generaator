@@ -1,0 +1,70 @@
+name: Viljandi Kutseõppekeskus
+shortName: VIKK
+
+formatting:
+  documentClass: report
+  fontSize: 12pt
+  paperSize: a4paper
+  margins:
+    top: 2cm
+    bottom: 2cm
+    left: 3cm
+    right: 1.5cm
+  font:
+    main: Liberation Serif
+    mono: Liberation Mono
+  lineSpacing: 1.5
+  paragraphSpacing: 0pt
+  firstLineIndent: 1.25cm
+
+titlePage:
+  template: ""
+  showUniversity: true
+  showProgram: true
+  showAdvisor: true
+  showPlace: true
+  showYear: true
+
+headersFooters:
+  headerContent: ""
+  footerContent: ""
+  pageNumberPosition: footer-center
+  firstPageDifferent: true
+
+tableOfContents:
+  enabled: true
+  depth: 2
+  title: Sisukord
+
+sections:
+  topLevelDivision: chapter
+  numberSections: true
+  unnumberedSections:
+    - sissejuhatus
+    - kokkuvõte
+    - summary
+    - kasutatud allikad
+    - kasutatud allikate loetelu
+    - kirjandus
+    - lühendite loetelu
+
+bibliography:
+  sectionTitle: Kasutatud allikad
+
+crossref:
+  figureTitle: Joonis
+  tableTitle: Tabel
+  titleDelim: "."
+  figPrefix:
+    - joonis
+    - joonised
+  tblPrefix:
+    - tabel
+    - tabelid
+  secPrefix:
+    - peatükk
+    - peatükid
+
+language:
+  documentLang: et
+  hyphenation: estonian

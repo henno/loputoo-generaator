@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{report}
+
+% Encoding and fonts
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}[Ligatures=TeX]
+\setmonofont{Liberation Mono}
+
+% Page geometry - VIKK requirements
+\usepackage[a4paper,left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+% Line spacing - 1.5
+\usepackage{setspace}
+\setstretch{1.5}
+
+% Paragraph formatting
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+
+% Estonian language support
+\usepackage{polyglossia}
+\setdefaultlanguage{estonian}
+
+% Citations and bibliography
+\usepackage{csquotes}
+
+% Hyperlinks (no colored boxes)
+\usepackage[hidelinks]{hyperref}
+
+% Images
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+% Tables
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% Code listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  tabsize=2
+}
+
+% Float placement
+\usepackage{float}
+
+% Caption formatting
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Prevent overfull boxes in bibliography
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+% Fix for long URLs in bibliography
+\usepackage{xurl}
+
+% Title page data
+\title{$title$}
+\author{$author$}
+\date{$year$}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Large\bfseries $university$\par}
+\vspace{1cm}
+{\large $program$\par}
+\vspace{3cm}
+{\LARGE\bfseries $title$\par}
+\vspace{1cm}
+{\large $worktype$\par}
+\vspace{3cm}
+{\large $author$\par}
+\vspace{1cm}
+{\normalsize Juhendaja: $advisor$\par}
+\vfill
+{\normalsize $place$ $year$\par}
+\end{titlepage}
+
+% Table of contents
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+% Main content
+$body$
+
+\end{document}

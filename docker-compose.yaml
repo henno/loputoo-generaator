@@ -1,0 +1,43 @@
+services:
+  app:
+    build: .
+    container_name: loputoo-app
+    ports:
+      - "3200:3200"
+    volumes:
+      # Data directory - accessible from host for AI/CLI editing
+      - ./data:/app/data
+      # Optional: custom fonts
+      - ./fonts:/usr/share/fonts/custom:ro
+    environment:
+      - NODE_ENV=production
+      - PORT=3200
+      - DATA_DIR=/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3200/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Development service with hot reload
+  dev:
+    build:
+      context: .
+      target: base
+    container_name: loputoo-dev
+    ports:
+      - "3200:3200"
+    volumes:
+      - ./src:/app/src
+      - ./static:/app/static
+      - ./data:/app/data
+      - ./fonts:/usr/share/fonts/custom:ro
+    environment:
+      - NODE_ENV=development
+      - PORT=3200
+      - DATA_DIR=/app/data
+    command: bun run dev --host
+    profiles:
+      - dev

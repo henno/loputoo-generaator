@@ -2,8 +2,7 @@
 *.pdf
 *.docx
 
-# LaTeX vahefailid
-*.tex
+# LaTeX vahefailid (v.a template.tex failid)
 *.aux
 *.log
 *.toc
@@ -11,6 +10,18 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+loputoo.tex
+
+# Node.js
+node_modules/
+.svelte-kit/
+build/
+bun.lockb
+
+# Data directories (keep vikk school template)
+data/projects/
+data/temp/
+!data/schools/vikk/
 
 # macOS
 .DS_Store
@@ -24,3 +35,8 @@ desktop.ini
 .vscode/
 *.swp
 *.swo
+
+# Environment
+.env
+.env.*
+!.env.example
